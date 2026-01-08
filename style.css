@@ -88,6 +88,9 @@
   color: #ffffff;
   letter-spacing: 30px;
 }
+.cover_grid{
+  margin-top:145px ;
+}
 .cover {
   position: relative;
   background-image: url(images/cover.jpg);
@@ -96,6 +99,10 @@
   width: 1100px;
   min-height: 757px;
   z-index: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: repeat(3, auto), 50px;
+  grid-template-columns: auto auto;
 }
 .overlay {
   content: "";
@@ -107,14 +114,6 @@
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
 }
-.cover_grid {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-template-columns: 2fr 1fr;
-  position: relative;
-  z-index: 2;
-}
 .main_text {
   font-family: "Raleway", "Helvetica Neue", sans-serif;
   font-style: bold;
@@ -125,18 +124,20 @@
   letter-spacing: 30px;
 }
 .main_text_highest_word {
+  display: block;
   position: relative;
   grid-row: 1;
-  margin-top: 165px;
   margin-left: 50px;
 }
 .main_text_middle_word {
+  display: block;
   grid-row: 2;
   position: relative;
-  margin-top: 17px;
+  margin-top: 20px;
   margin-left: 380.5px;
 }
 .main_text_lowest_word {
+  display: block;
   grid-row: 3;
   position: relative;
   margin-top: 17px;
@@ -159,8 +160,8 @@
   z-index: 0;
 }
 .bet-button {
-  grid-row: 4;
-  grid-column: 1/2;
+  z-index: 2;
+  margin-top: 656px;
   width: 255px;
   height: 50px;
   border-width: 1px;
@@ -175,8 +176,8 @@
   font-size: 22px;
   text-align: center;
   color: #ffffff;
-  margin-left: 794px;
-  margin-top: 105px;
+  margin-left: 795px;
+  align-self: flex-start;
 }
 .lots_section {
   padding: 180px 24px 0px 24px;
@@ -243,6 +244,7 @@
   background-image: url(images/card-lot-03.jpg);
 }
 .look_more {
+  display: block;
   margin-top: 4px;
   margin-left: 40px;
   font-family: "Raleway", "Helvetica Neue", sans-serif;
@@ -256,7 +258,6 @@
   margin-top: 92px;
   display: grid;
   grid-template-columns: 334px 1fr;
-  grid-template-rows: 595px;
   gap: 50px;
 }
 .about_image {
@@ -296,6 +297,7 @@
 }
 .before_space {
   margin-top: 100px;
+  width: 690px;
 }
 .about_text {
   position: relative;
@@ -308,11 +310,12 @@
 }
 .central_space {
   margin-top: 24px;
+  width: 693px;
 }
 .footer {
   display: grid;
-  margin-top: 210px;
-  margin-bottom: 80px;
+  margin-top: 180px;
+  margin-bottom: 82px;
   width: 1100px;
   line-height: 25px;
   grid-template-columns: repeat(3, 1fr);
